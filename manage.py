@@ -5,6 +5,8 @@ import sys
 
 import dotenv
 
+from data.load_nickname import load_nickname
+
 
 def main():
     """Run administrative tasks."""
@@ -22,4 +24,5 @@ def main():
 
 if __name__ == "__main__":
     dotenv.read_dotenv()
+    load_nickname()
     main()
