@@ -1,7 +1,5 @@
-nickname = set()
-
-
 def load_nickname():
+    nicknames = set()
     with open("data/nickname_animal.csv", "r", encoding="utf-8") as f:
         lines = f.readlines()
         for line in lines:
@@ -9,5 +7,6 @@ def load_nickname():
                 continue
             if line.__contains__("/"):
                 temp = line.split("/")
-                nickname.update(temp)
-            nickname.add(line.strip())
+                nicknames.update(temp)
+            nicknames.add(line.strip())
+    return list(nicknames)

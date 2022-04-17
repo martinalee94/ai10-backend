@@ -26,14 +26,21 @@ def get_decoded_token(token):
     return decoded_token
 
 
+nickname_pool = []
+
+
 def get_nickname():
+    from data.load_nickname import load_nickname
+
     from apps.users.models import User
 
-    fake = Faker(["ko_KR"])
+    global nickname_pool
+
+    if nickname_pool == []:
+        nickname_pool = load_nickname()
     while True:
-        nickname = fake.bs().split(" ")[0]
-        nickname += random.choice([fake.first_name(), fake.job().split(" ")[-1]])
+        nickname = nickname_pool[random.randrange(0, len(nickname_pool), 1)]
         try:
             User.objects.get(nickname=nickname)
-        except Exception:
+        except ObjectDoesNotExist:
             return nickname
