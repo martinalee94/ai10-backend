@@ -20,6 +20,7 @@ requests = "*"
 faker = "*"
 gunicorn = "*"
 pytest-cov = "*"
+django-dotenv = "*"
 
 [dev-packages]
 
