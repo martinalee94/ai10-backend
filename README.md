@@ -3,7 +3,7 @@
 
 
 ## 1. 프로젝트 소개 ✅
-[Wellai](https://github.com/martinalee94/wellai) (메인 레포지토리 링크)<br>
+### [Wellai](https://github.com/martinalee94/wellai) (메인 레포지토리 링크)<br>
 ↑ 웰라이 메인 레포지토리에 자세한 내용이 첨부 되어 있으니 확인해 주세요!
 
 <br>
