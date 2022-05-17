@@ -96,7 +96,30 @@
 
 
 ## 6. 실행 방법 ✅
-###### Backend
+
+
+#### .env.prod & .env.prod.db 
+'example_' 로 시작하는 부분들 각 실행 환경에 맞게 바꿔서 파일 생성
+```
+# .env.prod
+SECRET_KEY = example_secretkey
+DJANGO_SETTINGS_MODULE = config.settings.local
+DJANGO_ALLOWED_HOSTS = 127.0.0.1 localhost
+POSTGRESQL_DATABASE = example_database
+POSTGRESQL_USER = example_user
+POSTGRESQL_PASSWORD = example_password
+POSTGRESQL_HOST = db
+POSTGRESQL_PORT = 5432
+TEST_DATABASE = example_testdatabase
+
+
+# .env.prod.db 
+POSTGRES_DB = example_database
+POSTGRES_USER = example_user 
+POSTGRES_PASSWORD = example_password
+```
+
+#### docker 실행
 ```
 docker-compose up
 ```
